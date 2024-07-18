@@ -14,7 +14,7 @@ body{
     margin: 20px 0;
 }
 
-.time{
+#time{
     display: flex;
     align-items: center;
     font-size: 35px;

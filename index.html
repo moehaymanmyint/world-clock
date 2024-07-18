@@ -13,36 +13,33 @@
     <div class="container w-50 p-4 my-4">
         <h1 class="title py-2">⏱️ World Clock ⏱️</h1>
         
-        <select name="" id="" class="form form-control my-3">
+        <select name="" id="" class="city-list form form-control my-3">
             <option value="">Select a city...</option>
-            <option value="yangon">Yangon</option>
-            <option value="bangkok">Bangkok</option>
-            <option value="malay">Malay</option>
-            <option value="newyork">New York</option>
-            <option value="mecca">Mecca</option>
+            <option value="Europe/London">London</option>
+            <option value="Asia/Bangkok">Bangkok</option>
+            <option value="Asia/Kuala_Lumpur">Malay</option>
+            <option value="America/New_York">New York</option>
+            <option value="Asia/Riyadh">Mecca</option>
         </select>
 
-        <div class="city-info">
-            <div class="">
-                <h1 class="city">Yangon</h1>
-                <p class="date">August 8, 2024</p>
+        <div class="city-display">
+            <div class="city-info">
+                <div class="details">
+                    <h1 class="yangon-city"></h1>
+                    <p class="yangon-date"></p>
+                </div>
+                <div id="time" class="yangon-time"></div>
             </div>
-            <div class="time">
-                1:50:40 AM
-            </div>
-        </div>
-
-        <hr>
-
-        <div class="city-info">
-            <div class="">
-                <h1>Bangkok</h1>
-                <p>August 8, 2024</p>
-            </div>
-            <div class="time">
-                1:50:40 AM
+            <hr>
+            <div class="city-info">
+                <div class="details">
+                    <h1 class="bangkok-city"></h1>
+                    <p class="bangkok-date"></p>
+                </div>
+                <div id="time" class="bangkok-time"></div>
             </div>
         </div>
+              
     </div>
 
     <footer>
