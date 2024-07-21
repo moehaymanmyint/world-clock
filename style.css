@@ -1,5 +1,6 @@
+@import url('https://fonts.googleapis.com/css2?family=LXGW+WenKai+TC:wght@700&display=swap');
 body{
-    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif !important;
+    font-family: "LXGW WenKai TC", cursive !important;
     height: 100vh;
     background: radial-gradient(343px at 46.3% 47.5%, rgb(242, 242, 242) 0%, rgb(241, 241, 241) 72.9%);
 }
