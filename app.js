@@ -10,6 +10,17 @@ function updateTime(){
     yangonDateElemnt.innerHTML = yangonTimezone.format("MMMM Do, YYYY");
     yangonTimeElement.innerHTML = yangonTimezone.format("h:mm:ss A");
 
+    // Istanbul
+    let singaporeCityElement = document.querySelector(".singapore-city");
+    let singaporeDateElemnt = document.querySelector(".singapore-date");
+    let singaporeTimeElement = document.querySelector(".singapore-time");
+
+    let singaporeTimezone = moment().tz("Asia/Singapore");
+
+    singaporeCityElement.innerHTML = "Singapore";
+    singaporeDateElemnt.innerHTML = singaporeTimezone.format("MMMM Do, YYYY");
+    singaporeTimeElement.innerHTML = singaporeTimezone.format("h:mm:ss A");
+
     // Bangkok
     let bangkokCityElement = document.querySelector(".bangkok-city");
     let bangkokDateElemnt = document.querySelector(".bangkok-date");
@@ -22,6 +33,7 @@ function updateTime(){
     bangkokTimeElement.innerHTML = bangkokTimezone.format("h:mm:ss A");
 }
 
+console.log(moment.tz.names());
 function updateCity(event){ 
     let timezone, cityName;
     // Current Time Zone
@@ -49,6 +61,29 @@ function updateCity(event){
 
 let cityList = document.querySelector(".city-list");
 cityList.addEventListener("change", updateCity);
-
 setInterval(updateTime, 1000);
+
+// All Cities
+function reload(){
+    location.reload();
+}
+
+let allCities = document.querySelector("#all-cities");
+allCities.addEventListener("click", reload);
+
+// Dark Mode
+function changeTheme(){
+    let body = document.querySelector(".light");
+    if(body.classList.contains("dark")){
+        body.classList.remove("dark");
+        icon.innerHTML = `<i class="fa-solid fa-moon fs-5" id="dark-mode"></i>`;
+    } else{
+        body.classList.add("dark");
+        icon.innerHTML = `<i class="fa-solid fa-sun fs-5" id="dark-mode"></i>`;
+    }    
+}
+
+let icon = document.querySelector("#dark-mode");
+icon.innerHTML = `<i class="fa-solid fa-moon fs-5" id="dark-mode"></i>`;
+icon.addEventListener("click", changeTheme);
 

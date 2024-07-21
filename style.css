@@ -1,17 +1,19 @@
-
 body{
     font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif !important;
+    height: 100vh;
+    background: radial-gradient(343px at 46.3% 47.5%, rgb(242, 242, 242) 0%, rgb(241, 241, 241) 72.9%);
 }
 .container{
-    background: rgb(200, 226, 243);
+    background: radial-gradient(circle at 10% 20%, rgba(216, 241, 230, 0.46) 0.1%, rgba(207, 194, 194, 0.28) 90.1%);
     box-shadow: 20px 20px 75px #cac7c7, -20px -20px 75px #ffffff;
     border-radius: 10px;
+    color: #07105e;
 }
 
 .city-info {
     display: flex;
     justify-content: space-between;
-    margin: 20px 0;
+    margin: 15px 0;
 }
 
 #time{
@@ -25,6 +27,11 @@ body{
     text-align: center;
 }
 
+.icons i{
+    font-size: 25px !important;
+    cursor: pointer;
+}
+
 footer{
     text-align: center;
 }
@@ -33,3 +40,15 @@ footer a{
     text-decoration: none;
 }
 
+/* Dark Mode */
+.dark{
+    background: -webkit-linear-gradient(90deg, rgb(27, 38, 65) 0%, hsla(220, 78%, 29%, 1) 100%);
+    color: rgb(217, 222, 233);
+}
+
+.dark .container{
+    background: -webkit-linear-gradient(90deg, rgb(10, 17, 61) 0%, rgb(49, 60, 121) 80%);
+    filter: progid: DXImageTransform.Microsoft.gradient(startColorstr="#95F9C3", endColorstr="#0B3866", GradientType=1);
+    box-shadow: 20px 20px 75px #424ba0, -20px -20px 75px #424ba0;;
+    color: rgb(255, 255, 255);
+}
